@@ -22,7 +22,7 @@ exports.handler = (event, context, callback) => {
     console.log("Message to send: " + messageText);
 
     if (event.clickType == "SINGLE") {
-        console.log("Single click detected. Setting amazon-instant-video to relevant in ed-qos policy.");
+        console.log("Single click detected. Setting "+application+" to Business-Relevant in "+tag+" policy.");
 
         var options = {
           url: url,
@@ -44,7 +44,7 @@ exports.handler = (event, context, callback) => {
           } );
 
     } else if (event.clickType == "DOUBLE") {
-        console.log("Double click detected. Setting amazon-instant-video to irrelevant in ed-qos policy.");
+        console.log("Double click detected. Setting "+application+" to Business-Irrelevant in "+tag+"policy.");
 
         var options = {
           url: url,
